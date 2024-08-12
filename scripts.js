@@ -8,16 +8,16 @@ function submitName() {
     const nameInput = document.getElementById('nameInput').value;
     const greeting = document.getElementById('greeting');
     if (nameInput.trim() !== '') {
-        greeting.textContent = `Hello, ${nameInput}! Welcome to My Professional Website`;
+        greeting.textContent = `Hello, ${nameInput}! Welcome to My Website`;
     } else {
-        greeting.textContent = 'Hello, World!'+ <br> +'Welcome to My Website';
+        greeting.textContent = 'Hello, World! Welcome to My Website';
     }
     closePopup();
 }
 
 function skipName() {
     const greeting = document.getElementById('greeting');
-    greeting.textContent = 'Hello, World! '<br>'Welcome to My Website';
+    greeting.textContent = 'Hello, World! Welcome to My Website';
     closePopup();
 }
 
