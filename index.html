@@ -3,41 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Maésha Mahmud Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <h2>Welcome!</h2>
-            <p>Please enter your name:</p>
-            <input type="text" id="nameInput" placeholder="Your name...">
-            <button onclick="submitName()">Submit</button>
-            <button onclick="skipName()">I do not wish to say</button>
-        </div>
-    </div>
     <header>
-        <h1 id="greeting"><br>Welcome To My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1 class="title">Maésha Mahmud</h1>
+        <p class="subtitle">Computer Science Student | Aspiring Developer</p>
+        <div class="scroll-text">Welcome to my portfolio!</div>
     </header>
-    <section id="home">
-        <h2>Home</h2>
-        <p>This is the home section.</p>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Project 1: Tech App</h3>
+                <p>My first tech app project description.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2: Website Design</h3>
+                <p>This project highlights my web development skills.</p>
+            </div>
+            <div class="project">
+                <h3>Project 3: Data Analytics</h3>
+                <p>Data analysis and machine learning integration.</p>
+            </div>
+        </div>
     </section>
-    <section id="about">
-        <h2>About</h2>
-        <p>This is the about section.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>This is the contact section.</p>
-    </section>
-    <script src="scripts.js"></script> 
+
+    <footer>
+        <p>&copy; 2024 Maésha Mahmud</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
