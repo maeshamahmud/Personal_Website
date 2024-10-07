@@ -2,38 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maésha Mahmud Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <header>
-        <h1 class="title">Maésha Mahmud</h1>
-        <p class="subtitle">Computer Science Student | Aspiring Developer</p>
-        <div class="scroll-text">Welcome to my portfolio!</div>
-    </header>
+    <nav id="desktop-nav">
+        <div class="logo">Maesha Mahmud</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-            <div class="project">
-                <h3>Project 1: Tech App</h3>
-                <p>My first tech app project description.</p>
+    <nav id="hamburger-nav">
+        <div class="logo">Maesha Mahmud</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <div class="project">
-                <h3>Project 2: Website Design</h3>
-                <p>This project highlights my web development skills.</p>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
-            <div class="project">
-                <h3>Project 3: Data Analytics</h3>
-                <p>Data analysis and machine learning integration.</p>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/images/unnamed (6).jpg" alt="Maesha Mahmud profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Maesha Mahmud</h1>
+            <p class="section__text__p2">Software Developper</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Maesha_Mahmud_Resume.docx')"
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 Maésha Mahmud</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
