@@ -5,13 +5,13 @@ function toggleMenu() {
     icon.classList.toggle("open")
 }
 
-window.addEventListener('scroll', function() {
-    let scrollPosition = window.scrollY;
-    let header = document.querySelector('header');
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    if (scrollPosition > 50) {
-        header.style.backgroundColor = '#222';
-    } else {
-        header.style.backgroundColor = '#333';
-    }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
+
