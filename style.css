@@ -203,6 +203,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-bottom: 20px;
 }
 
 .btn {
@@ -364,50 +365,53 @@ footer p{
 }
 
 .timeline {
+    width: 100%;
     position: relative;
-    margin: 0 auto;  /* Center it horizontally */
-}
-
-.circle {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(85,85,85);
+  }
+  
+  .timeline-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .timeline-content {
+    width: 45%;
+    padding: 10px;
+  }
+  
+  .left {
+    text-align: right;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  
+  .right {
+    text-align: left;
+    padding: 0;
+  }
+  
+  .timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(53,53,53);
     border-radius: 50%;
-    margin-right: 10px;
-    position: relative;
-}
-
-.line {
-    display: inline-block;
+  }
+  
+  .line {
     width: 2px;
-    height: 60px;
-    background-color: rgb(85,85,85);
-    position: absolute;
-    top: 15px;
-    left: 6px;
-}
-
-
-.timeline-content {
-    padding-left: 25px;
-}
-
-.timeline-content h3 {
-    font-size: 18px;
-    color: #333;
-}
-
-.timeline-content p {
-    font-size: 14px;
-    color: #888;
-    margin: 5px 0;
-}
-
-.timeline-content span {
-    font-size: 12px;
-    color: #aaa;
-    display: block;
-    margin-top: 5px;
-}
-
+    height: 75px;
+    background-color: rgb(53,53,53);
+    flex-grow: 1;
+  }
+  
+  
+  
