@@ -72,11 +72,17 @@
 
         <div class="experience-details-container">
             <div class="btn-container">
-                <button class="btn btn-color-2 project-btn">Professional</button>
+            <!-- <button class="btn btn-color-1">Professional</button>
                 <button class="btn btn-color-2 project-btn">Extracurricular</button>
+            -->
+                <input type="radio" id="professional" name="experience-type" checked onclick="showTimeline()">
+                <label for="professional" class="btn">Professional</label>
+    
+                <input type="radio" id="extracurricular" name="experience-type" onclick="showTimeline()">
+                <label for="extracurricular" class="btn btn-color-2">Extracurricular</label>
             </div>
 
-            <div class="timeline">
+            <div class="timeline professional-timeline" id="professional-timeline">
                 <div class="timeline-row">
                     <div class="timeline-content left">
                         <h3>Food Server</h3>
@@ -142,10 +148,76 @@
                     </div>
                     <div class="timeline-content right"></div>
                 </div>
+            </div> <!--timeline-->
 
-            </div>
-        </div>
-  
+            <div class="timeline extracurricular-timeline" id="extracurricular-timeline">
+                <div class="timeline-row">
+                    <div class="timeline-content left">
+                        <h3>Mentee, Ambassador, Mentor</h3>
+                        <p>Women In Engineering</p>
+                        <span>Oct 2021 - Present</span>
+                    </div>
+                    <div class="timeline-marker">
+                        <span class="circle"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="timeline-content right"></div>
+                </div>
+
+                <div class="timeline-row">
+                    <div class="timeline-content left"></div>
+                    <div class="timeline-marker">
+                        <span class="circle"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="timeline-content right">
+                        <h3>Vice President of Design</h3>
+                        <p>HackConcordia</p>
+                        <span>May 2023 - May 2024</span>
+                    </div>
+                </div>
+
+                <div class="timeline-row">
+                    <div class="timeline-content left">
+                        <h3>Director of Technology</h3>
+                        <p>Software Engineering and Computer Science Club</p>
+                        <span>Oct 2023 - Present</span>
+                    </div>
+                    <div class="timeline-marker">
+                        <span class="circle"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="timeline-content right"></div>
+                </div>
+
+                <div class="timeline-row">
+                    <div class="timeline-content right">
+                    </div>
+                    <div class="timeline-marker">
+                        <span class="circle"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="timeline-content right">
+                        <h3>Project Manager</h3>
+                        <p>CodElle, Enactus</p>
+                        <span>Aug 2023 - May 2024</span>
+                    </div>
+                </div>
+
+                <div class="timeline-row">
+                    <div class="timeline-content left">
+                        <h3>External Delegate</h3>
+                        <p>Concordia Global Affairs Association</p>
+                        <span>Sep 2024 - Present</span>
+                    </div>
+                    <div class="timeline-marker">
+                        <span class="circle"></span>
+                        <span class="line"></span> 
+                    </div>
+                    <div class="timeline-content right"></div>
+                </div>
+            </div> <!--timeline-->
+        </div> 
     </section>
 
     <section id="projects">
