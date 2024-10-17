@@ -281,6 +281,11 @@ section {
     text-align: center;
   }
 
+  .details-container:hover {
+    background: rgb(200, 200, 200);
+    border-color: rgb(150, 150, 150);
+  }
+
   .experience-details-container {
     display: flex;
     justify-content: center;
@@ -446,5 +451,7 @@ label:hover {
 .text-container {
     margin-bottom: 20px;
 }
+
+
   
   
