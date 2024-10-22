@@ -452,6 +452,17 @@ label:hover {
     margin-bottom: 20px;
 }
 
+.arrow-container {
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 20px;  /* Adjust as needed */
+    right: 20px;   /* Adjust as needed */
+    height: 40px;  /* Adjust height of arrow */
+    cursor: pointer;
+}
 
   
   
