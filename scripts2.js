@@ -1,4 +1,6 @@
 const circle = document.querySelector('.circle');
+const nav = document.querySelector('nav');
+
 
 document.addEventListener('mousemove', (e) => {
 let x = e.clientX;
