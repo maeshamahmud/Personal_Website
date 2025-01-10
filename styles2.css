@@ -82,3 +82,17 @@ ul li a{
     text-decoration: none;
     margin: 0 1vw;
 }
+
+button{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 1vw 2vw;
+    border-radius: 5vh;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
