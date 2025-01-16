@@ -1,0 +1,42 @@
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    margin: 0;
+    background-color: rgb(31, 31, 31);
+    font-family: "Nunito Sans", serif;
+}
+
+.box{
+    border: 1px solid black;
+    width: 100vw;
+    height: 3.5vh;
+}
+
+.box.header{
+    background-color: rgb(24, 24, 24);
+    border-bottom: 1px solid rgb(50, 50, 50);
+
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.box.title{
+    background-color: rgb(37, 37, 37);
+    border-radius: 5px;
+    color: rgb(194, 194, 194);
+    width: 40vw;
+    height: 22px;
+    text-align: center;
+    border-color: rgb(65, 65, 65);
+
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 13px;
+}
+
+.box.title:hover{
+    cursor: pointer;
+}
