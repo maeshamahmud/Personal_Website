@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Resource</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <style>
+        section {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: left;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .btn:hover {
+            background-color: #555;
+
+        }
+    </style>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo" onclick="window.location.href='index.html'">Maésha Mahmud</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="free-resources.html">Free Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo" onclick="window.location.href='index.html'">Maésha Mahmud</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="free-resources.html" onclick="toggleMenu()">Free Resources</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h2>Get Your Free Resource</h2>
+        <form action="https://formspree.io/f/mbldkery" method="POST">
+            <p style="text-align: left;">Your Name:</p>
+            <input type="text" id="name" name="name" required>
+            
+            <p style="text-align: left;">Your Email:</p>
+            <input type="email" id="email" name="email" required>
+            
+            <input type="hidden" id="resource" name="resource">
+            <button type="submit" class="btn">Access Resource</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Copyright &#169; <span id="current-year"></span> Maésha Mahmud. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-links').classList.toggle('open');
+        }
+    
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const urlParams = new URLSearchParams(window.location.search);
+            const resource = urlParams.get('resource') || "readme-template.md"; // Default to readme-template.md
+    
+            // Submitting the form data to Formspree
+            const formData = new FormData(event.target);
+            fetch("https://formspree.io/f/mbldkery", {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    window.location.href = resource; // Redirect to the resource after successful submission
+                } else {
+                    alert("There was an issue submitting the form. Please try again.");
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    </script>
+    
+</body>
+</html>
